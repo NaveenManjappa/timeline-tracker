@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2026 Timeline Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>2026 Timeline Tracker</h1>
+        <p class="subtitle">Master your time. Master your mind.</p>
+      </header>
+
+      <section class="trackers-grid">
+        <!-- Year Tracker -->
+        <div class="card tracker-card">
+          <h2>Year 2026</h2>
+          <div class="progress-container">
+            <div class="progress-bar" id="year-progress"></div>
+          </div>
+          <div class="stats">
+            <div class="stat-item">
+              <span class="label">Days Spent</span>
+              <span class="value" id="year-spent">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="label">Days Left</span>
+              <span class="value" id="year-left">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="label">Completion</span>
+              <span class="value highlight" id="year-percent">0%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Month Tracker -->
+        <div class="card tracker-card">
+          <h2 id="month-title">Current Month</h2>
+          <div class="progress-container">
+            <div class="progress-bar" id="month-progress"></div>
+          </div>
+          <div class="stats">
+            <div class="stat-item">
+              <span class="label">Days Spent</span>
+              <span class="value" id="month-spent">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="label">Days Left</span>
+              <span class="value" id="month-left">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="label">Completion</span>
+              <span class="value highlight" id="month-percent">0%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- May 3rd Goal Tracker -->
+        <div class="card tracker-card special-tracker">
+          <h2>Target: May 3rd, 2026</h2>
+          <div class="progress-container">
+            <div class="progress-bar" id="target-progress"></div>
+          </div>
+          <div class="stats">
+            <div class="stat-item">
+              <span class="label">Days Spent</span>
+              <span class="value" id="target-spent">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="label">Days Left</span>
+              <span class="value" id="target-left">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="label">Completion</span>
+              <span class="value highlight" id="target-percent">0%</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mantra-section">
+        <div class="card mantra-card">
+          <h2>Mindset Reset</h2>
+          <div class="mantra-buttons">
+            <button class="mantra-btn" data-type="tired">Feeling Tired</button>
+            <button class="mantra-btn" data-type="hard">Work is Hard</button>
+            <button class="mantra-btn" data-type="bank">Bank Account</button>
+            <button class="mantra-btn" data-type="family">Family Time</button>
+            <button class="mantra-btn" data-type="stuck">Feeling Stuck</button>
+          </div>
+          <div class="mantra-display">
+            <p id="mantra-text">
+              Select a situation above to center your mind.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
