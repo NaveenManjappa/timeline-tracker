@@ -201,6 +201,34 @@ header h1 {
   animation: fadeIn 0.5s ease-in-out;
 }
 
+.quote-section {
+  margin-top: 1rem;
+}
+
+.quote-card {
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+}
+
+.quote-card h2 {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.quote-text {
+  width: 100%;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--text-primary);
+  white-space: normal;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  margin: 0;
+  text-align: justify;
+  word-spacing: 0.04em;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
