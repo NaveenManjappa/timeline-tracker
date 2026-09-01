@@ -44,19 +44,17 @@ function updateTrackers() {
         daysInMonth - daysSpentMonth
     );
 
-    // 3. May 3rd, 2026 Tracker
-    // Assuming start date is Jan 1, 2026 for the "completion" context, 
-    // or we can just track countdown. Let's track from Jan 1, 2026 to May 3, 2026.
-    const targetDate = new Date(2026, 4, 3, 23, 59, 59); // May is month 4 (0-indexed)
+    // 3. Target countdown to 21st Oct 2026
+    const targetDate = new Date(2026, 9, 21, 23, 59, 59); // Oct is month 9 (0-indexed)
     const startOfTargetPeriod = new Date(2026, 0, 1);
-    
+
     const totalTargetDays = (targetDate - startOfTargetPeriod) / (1000 * 60 * 60 * 24);
-    const daysSpentTarget = (now - startOfTargetPeriod) / (1000 * 60 * 60 * 24);
-    
-    // If we are past the date
+    const daysSpentTarget = Math.max(0, (now - startOfTargetPeriod) / (1000 * 60 * 60 * 24));
+    const daysLeftTarget = Math.max(0, (targetDate - now) / (1000 * 60 * 60 * 24));
+
     let spentTargetDisplay = daysSpentTarget;
-    let leftTargetDisplay = totalTargetDays - daysSpentTarget;
-    
+    let leftTargetDisplay = daysLeftTarget;
+
     if (now > targetDate) {
         spentTargetDisplay = totalTargetDays;
         leftTargetDisplay = 0;
